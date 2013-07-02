@@ -2,8 +2,12 @@ class Group < ActiveRecord::Base
   
   INACTIVITY_TIME = 8.hours
 
+  def self.clean
+    where("updated_at <= ?", INACTIVITY_TIME.ago).destroy_all
+  end
+
   attr_accessible :password
-  has_many :users
+  has_many :users, dependent: :destroy
   after_initialize :generate_password
 
   def as_json(*args)
