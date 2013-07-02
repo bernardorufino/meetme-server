@@ -1,7 +1,8 @@
 namespace :scheduler do
-  desc "Clean groups due to inactivity"
+  desc "Scheduler"
+
   task :clean_groups => :environment do
-    # Clean groups here
+    Group.where("updated_at <= ?", Group::INACTIVITY_TIME.ago).destroy_all
   end
 
 end
