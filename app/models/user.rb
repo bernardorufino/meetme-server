@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   belongs_to :group
 
   def as_json(*args)
-  	{id: id, name: name, latitude: latitude, longitute: longitude}
+  	{id: id, name: name, latitude: latitude, longitude: longitude}
   end
 
 end
