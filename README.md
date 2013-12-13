@@ -33,11 +33,13 @@ Returns
 		"name":"Joao",
 		"latitude":-23.210079,
 		"longitute":-45.876911
+		"status": "active"
 	},{
 		"id":9,
 		"name":"Samuel",
 		"latitude":-3.730712,
-		"longitute":-38.526134
+		"longitute":-38.526134,
+		"status": "active"
 	}]
 }}
 ```

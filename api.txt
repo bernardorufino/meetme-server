@@ -1,0 +1,34 @@
+"/apartments/:apartment_number" => [
+	{
+		allocation_label: "A", resident: {
+			name: "Eric Muxacaga",
+			nickname: "Muxa",
+			url: "http://www.facebook.com/:id",
+			course: "COMPÃO",
+			class: "T15"
+		}
+	}, 
+	...
+]
+
+"/apartments/101,102,103,..." => [
+	{
+		apartment_number: 101,
+		allocations: [
+			VIDE ACIMA!
+		]
+	},
+	...
+]
+
+"/search/query+aqui" => [
+	{
+		apartment_number: 101,
+		allocations: [
+			VIDE ACIMA!
+		],
+		matched_allocations: ["A", "B"]  
+	},
+	...
+]
+
