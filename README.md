@@ -43,7 +43,7 @@ Returns
 	}]
 }}
 ```
-Note that if the server doesn't receive updates from certain user for the last 30 minutes it will mark it as inactive, and only after new updates it will consider it as active.
+Note that if the server doesn't receive updates from certain user for the last 30 minutes it will no longer return it [NEXT FEATURE: only if 'force' option is passed], and only after new updates it will consider it as active.
 Updating it's location is via the user id, returned by the first request to create new group or to join existing group
 ```
 /groups/update/p0m6?user=8&lat=-8.053849&lon=-34.885540

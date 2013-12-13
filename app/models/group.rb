@@ -11,7 +11,12 @@ class Group < ActiveRecord::Base
   after_initialize :generate_password
 
   def as_json(*args)
-    {updated_at: updated_at, users: users}
+    {updated_at: updated_at, users: active_users}
+  end
+
+  def active_users
+    # TODO: Make it more Rails-like with scopes
+    users.select { |u| u.status == :active }    
   end
 
   protected
